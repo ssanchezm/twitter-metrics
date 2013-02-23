@@ -1,8 +1,13 @@
 $(function(){
 
-  updateData = function(data){
-	  console.log(data);
+  updateData = function(tweets){
+      user = Helpers.getUser(tweets);
+      displayData();
   }
+
+  displayData = function(data) {
+    Display.userInfo(user);
+	}
 
 
   pullDataFromTwitter = function(){
